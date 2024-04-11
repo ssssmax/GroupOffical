@@ -8,6 +8,10 @@ import LayoutTop from "@/components/LayoutComponents/LayoutTop.vue";
 import LayoutCarousel from "@/components/LayoutComponents/LayoutCarousel.vue";
 import LayoutMenu from "@/components/LayoutComponents/LayoutMenu.vue";
 import ToTop from "@/components/LayoutComponents/ToTop.vue";
+import NewsCenter from "@/components/LayoutComponents/NewsCenter.vue";
+import ContestComponent from "@/components/LayoutComponents/ContestComponent.vue";
+import AcademicComponent from "@/components/LayoutComponents/AcademicComponent.vue";
+import ResearchComponent from "@/components/LayoutComponents/ResearchComponent.vue";
 const router = useRouter()
 gsap.registerPlugin(ScrollTrigger)
 const system_title = ref('在线检测系统')
@@ -37,6 +41,7 @@ onMounted(() => {
 //暂时的图片
 const tempImg_1 = ref('https://picsum.photos/200/200?1')
 const tempImg_2 = ref('https://picsum.photos/200/200?2')
+
 //团队简介
 const leader = ref(
     ' 学 术 职 衔 :        硕士生导师             \n' +
@@ -105,6 +110,15 @@ const freeUse = () => {
         </div>
       </div>
     </div>
+    <!-- 项目介绍 -->
+    <ResearchComponent />
+    <!-- 新闻中心 -->
+    <NewsCenter />
+    <!-- 竞赛活动 -->
+    <ContestComponent />
+    <!-- 学术活动 -->
+    <AcademicComponent />
+    <el-divider direction="horizontal" />
     <!-- 产品介绍 -->
     <div class="w-full h-full relative block overflow-hidden">
       <div class="w-full h-1/2 product-info relative block">

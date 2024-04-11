@@ -4,6 +4,8 @@ import NProgress from 'nprogress'
 import ControllerPage from "@/views/ControlPanel/ControllerPage.vue";
 import LoginPage from "@/views/LoginPage/LoginPage.vue";
 import ClientPage from "@/views/Buyer/ClientPage.vue";
+import NewsPage from "@/views/NewsCenter/NewsPage.vue";
+import ProjectPage from "@/views/Projects/ProjectPage.vue";
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [
@@ -26,6 +28,16 @@ const router = createRouter({
       path: '/buyer',
       name: 'buyer',
       component: ClientPage
+    },
+    {
+      path: '/news',
+      name: 'news',
+      component: NewsPage
+    },
+    {
+      path: '/project',
+      name: 'project',
+      component: ProjectPage
     }
   ]
 })
@@ -35,7 +47,7 @@ router.beforeEach(async () => {
 })
 
 // 页面路由切换完毕的时候
-router.afterEach(() => {
+router.afterEach(async () => {
   // 关闭进度条
   NProgress.done()
 })

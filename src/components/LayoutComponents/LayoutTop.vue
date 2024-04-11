@@ -1,5 +1,6 @@
 <script setup>
 import {useRouter} from "vue-router";
+import {ArrowDown} from "@element-plus/icons-vue";
 const router = useRouter()
 const login = () => {
   router.push('/login')
@@ -7,7 +8,7 @@ const login = () => {
 </script>
 
 <template>
-  <div class="w-full h-14 bg-black z-20 shadow-lg fixed left-0 block top-0">
+  <div class="w-full h-14 bg-black z-[499] shadow-lg fixed left-0 block top-0">
     <div class="w-2/3 h-full relative flex mx-auto">
       <div class="w-auto h-full flex relative">
         <el-dropdown trigger="click" class="mr-4 my-auto">
