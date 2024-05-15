@@ -38,7 +38,7 @@ watchEffect(route.fullPath,() => {
           style="border-bottom: none;height: 56px"
       >
         <el-menu-item index="/controller">
-          在线体验
+          产品介绍
         </el-menu-item>
         <el-menu-item index="/">
           首页

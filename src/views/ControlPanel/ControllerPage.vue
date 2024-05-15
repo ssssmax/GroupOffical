@@ -84,7 +84,7 @@ onMounted(() => {
               {{pageInfo}}
             </div>
             <div class="w-auto h-auto relative block">
-              <el-button type="primary" plain>免费试用</el-button>
+              <el-button type="primary" plain>了解更多</el-button>
             </div>
             <el-divider direction="horizontal" />
           </div>
@@ -120,50 +120,39 @@ onMounted(() => {
             <div class="block relative w-full h-8 leading-8 text-black text-left font-bold text-[20px]">
               {{playGround}}
             </div>
-            <div class="w-full relative flex h-8">
-              <a-input-search
-                  v-model:value="value"
-                  placeholder="请输入图片的URL，Chrome只支持粘贴图片"
-                  size="large"
-                  allowClear
-              >
-                <template #enterButton>
-                  <a-button>添加网络图片</a-button>
-                </template>
-              </a-input-search>
-              <el-button type="primary" icon="Plus" style="height: 38px;margin-left: 20px">随机添加图片</el-button>
-            </div>
-            <div class="w-full select relative block py-4 overflow-hidden">
-              <div class="w-full h-full relative block bg-[#f5f5f5] p-4">
-                <div class="w-full h-[150px] relative block bg-white">
-                  <el-upload action="#" list-type="picture-card" :auto-upload="false">
-                    <el-icon><Plus /></el-icon>
-                    <template #file="{ file }">
-                      <div>
-                        <img class="el-upload-list__item-thumbnail" :src="file.url" alt="" />
-                        <span class="el-upload-list__item-actions">
-                          <span
-                              class="el-upload-list__item-preview"
-                              @click="handlePictureCardPreview(file)"
-                          >
-                            <el-icon><zoom-in /></el-icon>
-                          </span>
-                        </span>
-                      </div>
-                    </template>
-                  </el-upload>
-
-                  <el-dialog v-model="dialogVisible">
-                    <img w-full :src="dialogImageUrl" alt="Preview Image" />
-                  </el-dialog>
-                </div>
-                <div class="w-full h-8 relative mt-4 flex justify-center">
-                  <el-button type="info" plain>开始检测</el-button>
-                </div>
+            <!-- 产品展示区 -->
+            <div class="w-full select relative grid grid-cols-2 gap-2">
+              <!-- 介绍图片 -->
+              <div class="w-full h-full relative block">
+                <img src="https://picsum.photos/200/300?5" alt="" loading="lazy" class="w-full h-[380px] relative block rounded-md overflow-hidden">
+              </div>
+              <div class="w-full h-full relative block">
+                <el-card
+                    class="w-full h-full relative block overflow-hidden"
+                >
+                  <template #header>
+                    <span class="font-bold">汽车工业场景</span>
+                  </template>
+                  <div class="w-full h-auto relative block">
+                    <p class="text-black text-[15px] font-bold">优势</p>
+                    <p class="w-full h-auto leading-[40px] text-ellipsis overflow-hidden whitespace-nowrap pl-4 text-black">
+                      -小样本学习，无须担心商业机密泄露
+                    </p>
+                    <p class="w-full h-auto leading-[40px] text-ellipsis overflow-hidden whitespace-nowrap pl-4 text-black">
+                      -泛化能力强，少量样本学习也能达到高精度
+                    </p>
+                    <p class="w-full h-auto leading-[40px] text-ellipsis overflow-hidden whitespace-nowrap pl-4 text-black">
+                      -远程部署，弹性扩容，开箱即用，使用方便
+                    </p>
+                  </div>
+                  <div class="w-full h-auto relative flex justify-center">
+                    <el-button type="danger" class="w-full h-auto relative block">联系我们</el-button>
+                  </div>
+                </el-card>
               </div>
             </div>
-            <div class="w-full h-8 relative block leading-8 text-[10px] text-[#4D4D4DFF]">
-              在线体验仅作为部分体验，不代表产品完整功能
+            <div class="w-full h-8 relative block text-right leading-8 text-[10px] text-[#4D4D4DFF]">
+              图片不代表实际使用，请以实际为准
             </div>
           </div>
         </el-skeleton>

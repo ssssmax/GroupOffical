@@ -5,6 +5,7 @@ import { createPinia } from 'pinia'
 import 'nprogress/nprogress.css'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import 'ant-design-vue/dist/reset.css';
+import 'element-plus/dist/index.css'
 import App from './App.vue'
 import router from './router'
 

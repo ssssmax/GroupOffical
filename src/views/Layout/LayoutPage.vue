@@ -237,6 +237,11 @@ const freeUse = () => {
         </div>
       </div>
     </div>
+    <!-- 页底 -->
+    <div class="w-full h-[250px] relative block bg-black">
+
+    </div>
+    <!-- floated button -->
     <ToTop class="top" />
   </div>
 </template>

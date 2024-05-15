@@ -10,6 +10,7 @@ const active = ref('1')
 const jumpToControl = () => {
   router.push('/controller')
 }
+/*
 const jumpToLog = () => {
   router.push('/login')
 }
@@ -17,6 +18,7 @@ const jumpToBottom = () => {
   window.scrollTo(0,0)
   window.scrollTo(0,document.documentElement.scrollHeight)
 }
+ */
 const backHome = () => {
   router.push('/')
 }
@@ -25,6 +27,10 @@ const jumpToNews = () => {
 }
 const jumpToProject = () => {
   router.push('/project')
+}
+//联系我们
+const jumpToUs = () => {
+  router.push('us');
 }
 //高亮持久化
 const isLayout = () => {
@@ -37,6 +43,9 @@ const isLayout = () => {
           break;
     case '/project':
       active.value = '2'
+          break;
+    case '/us':
+      active.value = '5'
           break;
   }
 }
@@ -58,8 +67,8 @@ watch(() => route.fullPath,() => {
     <el-menu-item index="1" @click="backHome">首页</el-menu-item>
     <el-menu-item index="2" @click="jumpToProject">研究课题</el-menu-item>
     <el-menu-item index="3" @click="jumpToNews">新闻中心</el-menu-item>
-    <el-menu-item index="4" @click="jumpToControl">在线体验</el-menu-item>
-    <el-menu-item index="5">联系我们</el-menu-item>
+    <el-menu-item index="4" @click="jumpToControl">产品介绍</el-menu-item>
+    <el-menu-item index="5" @click="jumpToUs">联系我们</el-menu-item>
   </el-menu>
 </template>
 

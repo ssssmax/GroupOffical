@@ -1,5 +1,7 @@
 <script setup>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+import {ElMessage} from "element-plus";
 //项目介绍暂时填充图片
 const temp = ref([
   {
@@ -19,6 +21,16 @@ const temp = ref([
     url: 'https://picsum.photos/200/300?4'
   }
 ])
+//router
+const router = useRouter();
+//跳转研究计划详情页
+const jumpTo = (current) => {
+  router.push('/project');
+  ElMessage({
+    type: "success",
+    message: `研究课题 + ${current}`
+  })
+}
 </script>
 
 <template>
@@ -29,7 +41,7 @@ const temp = ref([
       </div>
       <el-divider style="margin-top: 5px;margin-bottom: 5px" direction="horizontal" />
       <div style="height: calc(100% - 52px)" class="w-full grid grid-cols-4 gap-3 relative overflow-hidden">
-        <div v-for="item in temp" :key="item" class="w-full project box-border h-full cursor-pointer relative block rounded-[5px] overflow-hidden">
+        <div @click="jumpTo(item.id)" v-for="item in temp" :key="item" class="w-full project box-border h-full cursor-pointer relative block rounded-[5px] overflow-hidden">
           <img :src="item.url" alt="" class="w-full h-full relative block overflow-hidden object-cover" loading="lazy">
         </div>
       </div>

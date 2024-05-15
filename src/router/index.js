@@ -6,6 +6,7 @@ import LoginPage from "@/views/LoginPage/LoginPage.vue";
 import ClientPage from "@/views/Buyer/ClientPage.vue";
 import NewsPage from "@/views/NewsCenter/NewsPage.vue";
 import ProjectPage from "@/views/Projects/ProjectPage.vue";
+import CommunateUs from "@/views/Community/CommunateUs.vue";
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [
@@ -38,6 +39,11 @@ const router = createRouter({
       path: '/project',
       name: 'project',
       component: ProjectPage
+    },
+    {
+      path: '/us',
+      name: 'us',
+      component: CommunateUs,
     }
   ]
 })
