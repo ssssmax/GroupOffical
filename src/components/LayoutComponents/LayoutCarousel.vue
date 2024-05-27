@@ -3,15 +3,15 @@ import { ref } from "vue";
 const imgUrl = ref([
   {
     id: 1,
-    url: 'src/assets/image/car-1.png'
+    url: 'src/assets/image/djtu6.png'
   },
   {
     id: 2,
-    url: 'src/assets/image/car-2.png'
+    url: 'src/assets/image/djtu7.png'
   },
   {
     id: 3,
-    url: 'src/assets/image/car-3.png'
+    url: 'src/assets/image/djtu8.png'
   }
 ])
 </script>

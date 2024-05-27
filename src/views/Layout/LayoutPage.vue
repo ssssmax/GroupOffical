@@ -14,7 +14,7 @@ import AcademicComponent from "@/components/LayoutComponents/AcademicComponent.v
 import ResearchComponent from "@/components/LayoutComponents/ResearchComponent.vue";
 const router = useRouter()
 gsap.registerPlugin(ScrollTrigger)
-const system_title = ref('在线检测系统')
+const system_title = ref('大连交通大学智能研究所')
 const search_value = ref()
 onMounted(() => {
   let timer = gsap.timeline({
@@ -39,8 +39,8 @@ onMounted(() => {
       })
 })
 //暂时的图片
-const tempImg_1 = ref('https://picsum.photos/200/200?1')
-const tempImg_2 = ref('https://picsum.photos/200/200?2')
+const tempImg_1 = ref('src/assets/image/guo.jpg')
+const tempImg_2 = ref('src/assets/image/team.jpg')
 
 //团队简介
 const leader = ref(
@@ -54,13 +54,8 @@ const leader = ref(
     '研 究 方 向 :       机器学习，人工智能     ')
 const member = ref(
     '大连交通大学郭院长团队      \n' +
-    '组长 :                        张三\n' +
-    '组员 :                        张三\n' +
-    '组员 :                        张三\n' +
-    '组员 :                        张三\n' +
-    '组员 :                        张三\n' +
-    '组员 :                        张三\n' +
-    '组员 :                        张三\n'
+    '硕士一年级:                        范佳\t李阳\t马浩翔\t任宏远\t宋知伦\t万鹏\t徐红波\t徐潇\t俞洋\n' + 
+    '硕士二年级:                        金钰寒\t李欣然\t李一萌\t张力\n'
 )
 //立即体验
 const freeUse = () => {

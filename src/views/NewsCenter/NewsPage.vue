@@ -5,16 +5,10 @@ import LayoutMenu from "@/components/LayoutComponents/LayoutMenu.vue";
 import {Timer} from "@element-plus/icons-vue";
 const value = ref()
 //用来填充的文字
-const content = ref('Nowadays, some universities in China ' +
-    'has been forbidden to use product by MATHWORK, e.g. Matlab.' +
-    ' Many professors and students were complaining about the decision ' +
-    'because they use Matlab daily for their research and homework. Well, ' +
-    'although we have alternative programming choice like C++ and python, ' +
-    'Matlab do really has its own irreplacable good characteristics in computation ' +
-    'and simulation. Under this circumstance, Julia was developed as an open source,' +
-    ' free computation language to replace Matlab. Users can easily use it with ' +
-    'different IDE like vscode and ATOM. In this article, we want to introduce' +
-    ' some basic usage of it and compare the performance with different languages.'
+const content = ref('中国电信人工智能研究院发布了一项名为 「星辰超多方言语音识别大模型」 的技术，该模型能够识别 30 多种方言，包括粤语、上海话、四川话和温州话等，' +
+    '这是国内支持方言种类最多的语音识别模型。研发团队通过采用 「蒸馏 + 膨胀」 联合训练算法，成功解决了大规模参数下的预训练问题' +
+    '并实现了 1B 参数 80 层模型的稳定训练。此外，星辰语音大模型是业内首个开源的离散语音表征模型' +
+    '通过新范式将语音传输比特率大幅降低，已在福建、江西、广西、北京、内蒙古等地中国电信的智能客服中试点应用。' 
 )
 const active = ref('1')
 </script>
@@ -42,7 +36,7 @@ const active = ref('1')
             :key="item"
         >
           <template #header>
-            <span class="hover:text-[#409EFF] cursor-pointer">Comparison Between Matlab and Julia</span>
+            <span class="hover:text-[#409EFF] cursor-pointer">中国电信发布首个支持 30 种方言混说语音大模型</span>
           </template>
           <div class="w-full h-auto pb-4 relative whitespace-pre-line leading-4 text-ellipsis block overflow-hidden">
             {{content}}
@@ -86,7 +80,7 @@ const active = ref('1')
           <el-collapse v-model="active" accordion>
             <el-collapse-item title="2024-04" name="1">
               <div class="w-full h-auto relative block">
-                <p v-for="item in 2" :key="item" class="mb-4 leading-4 text-black text-center hover:text-[#409EFF] cursor-pointer">Comparison Between Matlab and Julia</p>
+                <p v-for="item in 2" :key="item" class="mb-4 leading-4 text-black text-center hover:text-[#409EFF] cursor-pointer">中国电信发布首个支持 30 种方言混说语音大模型</p>
               </div>
             </el-collapse-item>
             <el-collapse-item title="2024-03" name="2">

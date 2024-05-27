@@ -67,7 +67,7 @@ watch(() => route.fullPath,() => {
     <el-menu-item index="1" @click="backHome">首页</el-menu-item>
     <el-menu-item index="2" @click="jumpToProject">研究课题</el-menu-item>
     <el-menu-item index="3" @click="jumpToNews">新闻中心</el-menu-item>
-    <el-menu-item index="4" @click="jumpToControl">产品介绍</el-menu-item>
+    <el-menu-item index="4" @click="jumpToControl">项目介绍</el-menu-item>
     <el-menu-item index="5" @click="jumpToUs">联系我们</el-menu-item>
   </el-menu>
 </template>

@@ -16,10 +16,10 @@
             :key="item"
         >
           <template #header>
-            <span class="hover:text-[#409EFF] cursor-pointer">xxxx高峰论坛</span>
+            <span class="hover:text-[#409EFF] cursor-pointer">ACAIT 2024征稿通知</span>
           </template>
           <div class="w-full h-auto max-h-[100px] relative block text-ellipsis overflow-hidden whitespace-pre-line text-black leading-4">
-            xxxxx高峰论坛将于近日在xx开幕
+            中国人工智能学会将于2024年11月8-10日在福建福州召开“第八届亚洲人工智能技术大会(ACAIT 2024)<br>大会仅接收英文稿件，投稿请参照IEEE Conference Proceedings模板：https://www.ieee.org/conferences/publishing/templates.html
           </div>
         </el-card>
       </div>

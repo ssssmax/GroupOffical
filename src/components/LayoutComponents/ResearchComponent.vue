@@ -6,19 +6,19 @@ import {ElMessage} from "element-plus";
 const temp = ref([
   {
     id: 1,
-    url: 'https://picsum.photos/200/300?1'
+    url: 'src/assets/image/pj1.jpg'
   },
   {
     id: 2,
-    url: 'https://picsum.photos/200/300?2'
+    url: 'src/assets/image/pj2.jpg'
   },
   {
     id: 3,
-    url: 'https://picsum.photos/200/300?3'
+    url: 'src/assets/image/pj3.jpg'
   },
   {
     id: 4,
-    url: 'https://picsum.photos/200/300?4'
+    url: 'src/assets/image/pj4.jpg'
   }
 ])
 //router
